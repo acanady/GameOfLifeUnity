@@ -14,9 +14,9 @@ public class BoardGenerator : MonoBehaviour
     {
         for (int i = 0; i < size; i++)
         {
-            for(int j =  0; j < size; j++)
+            for (int j = 0; j < size; j++)
             {
-                section = GameObject.Instantiate(prefab, new Vector3(i + i * .1f, 0, j + j * .1f), Quaternion.identity);
+                section = GameObject.Instantiate(prefab, new Vector3(i * .5f + i * .1f, 0, j * .5f + j* .1f), Quaternion.identity);
                 section.transform.SetParent(this.gameObject.transform);
             }
             

@@ -7,6 +7,6 @@ The game board is made up of many instantiated cube primitives, these cubes rese
 There are 3 preset sizes (small : 10x10, medium: 30x30, and large: 50x50) any more than that many cubes on screen at once causes
 frame rate issues. 
 
-Here's a look at the blank board from a top down view at it's largest size.
+Here's a look at the blank board from a top down view at its largest size.
 
 ![](board.gif)

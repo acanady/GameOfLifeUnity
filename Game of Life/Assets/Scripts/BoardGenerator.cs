@@ -10,6 +10,9 @@ public class BoardGenerator : MonoBehaviour
     private GameObject cell;
     public GameObject camera;
     private Vector3 campos;
+    public float boardLength;
+    public float frustHeight;
+    public float fieldofView;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +20,10 @@ public class BoardGenerator : MonoBehaviour
         GenerateBoard();
     }
 
+   
     public void GenerateBoard()
     {
+        
         camera = Camera.main.gameObject;
         campos = camera.transform.position;
         Board.CreateBoard(size);
@@ -33,6 +38,13 @@ public class BoardGenerator : MonoBehaviour
             }
 
         }
-        camera.transform.position = new Vector3(campos.x + Mathf.Ceil(size / 2) * .6f, campos.y, campos.z + Mathf.Ceil(size / 2) * .6f);
+
+        boardLength = Mathf.Abs(Board.GetCell(0, 0).transform.position.z - Board.GetCell(0, size - 1).transform.position.z);
+        frustHeight = boardLength + 1f;
+        float halfpos = Board.GetCell(0, size - 1).transform.position.z / 2f;
+        camera.transform.position = new Vector3(halfpos, frustHeight,halfpos);
+      
+      
+        
     }
 }

@@ -23,3 +23,6 @@ changed up the code to remember the cells original non_highlighted color and to 
 the improved version in all it's glory.
 
 ![](fixed_selection.gif)
+
+### Camera dynamic fov adustment
+The camera also changes it's height dynamically to fit the the proper board size onto the screen. Initially, the camera position was hard set for the small, medium, and large sizes. After a few hours of fiddling with values, researching, and using frustrum size calculations from the [Unity Doc](https://docs.unity3d.com/Manual/FrustumSizeAtDistance.html), I was able to get the camera to correctly position itself. With this upgrade the board can now support any sizes from 1 - 100.

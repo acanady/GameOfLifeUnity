@@ -22,11 +22,8 @@ I fiddled around with the highlighting code and realized  it was an issue with t
 changed up the code to remember the cells original non_highlighted color and to reference that when toggling the color. Here's
 the improved version in all it's glory.
 
-<<<<<<< HEAD
 ![](fixed_selection.gif)
 
 ### Camera dynamic fov adustment
 The camera also changes it's height dynamically to fit the the proper board size onto the screen. Initially, the camera position was hard set for the small, medium, and large sizes. After a few hours of fiddling with values, researching, and using frustrum size calculations from the [Unity Doc](https://docs.unity3d.com/Manual/FrustumSizeAtDistance.html), I was able to get the camera to correctly position itself. With this upgrade the board can now support any sizes from 1 - 100.
-=======
-![](/gifs/fixed_selection.gif)
->>>>>>> 0414809c81b4cfe9fccbb815a4c27a166ea36cea
+
